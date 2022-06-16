@@ -1,0 +1,126 @@
+#include <iostream>
+
+using namespace std;
+
+int main (int argc, char const *argv [])
+{
+		int Nota = 0;
+	
+	cout<<"Ingrese la nota que obtuvo: ";
+	cin>>Nota;
+	
+	if (Nota > 100 or Nota < 0)
+	{
+		cout<<"Ingrese una nota entre 0 - 100 ";
+		return 0;                                   
+	}
+	
+	if (Nota > 95 && Nota <= 100)
+	{
+		cout<<"Obtuviste una A++";
+	}
+		
+	if (Nota > 90 && Nota <= 95)
+	{
+		cout<<"Obtuviste una A+";
+	}
+		
+	if (Nota > 85 && Nota <= 90)
+	{
+		cout<<"Obtuviste una A";
+	}
+		
+	if (Nota > 80 && Nota <= 85)
+	{
+		cout<<"Obtuviste una A-";
+	}
+		
+	if (Nota > 75 && Nota <= 80)
+	{
+		cout<<"Obtuviste una B+";
+	}
+	
+	if (Nota > 70 && Nota <= 75)
+	{
+		cout<<"Obtuviste una B";
+	}
+		
+	if (Nota > 65 && Nota <= 70)
+	{
+		cout<<"Obtuviste una B-";
+	}
+		
+	if (Nota > 60 && Nota <= 65)
+	{
+		cout<<"Obtuviste una C+";
+	}
+		
+	if (Nota > 55 && Nota <= 60)
+	{
+		cout<<"Obtuviste una C";
+	}
+		
+	if (Nota > 50 && Nota <= 55)
+	{
+		cout<<"Obtuviste una C-";
+	}
+		
+	if (Nota > 45 && Nota <= 50)
+	{
+		cout<<"Obtuviste una D+";
+	}
+		
+	if (Nota > 40 && Nota <= 45)
+	{
+		cout<<"Obtuviste una D";
+	}
+		
+	if (Nota > 35 && Nota <= 40)
+	{
+		cout<<"Obtuviste una D-";
+	}
+		
+	if (Nota > 30 && Nota <= 35)
+	{
+		cout<<"Obtuviste una E+";
+	}
+		
+	if (Nota > 25 && Nota <= 30)
+	{
+		cout<<"Obtuviste una E";
+	}
+		
+	if (Nota > 20 && Nota <= 25)
+	{
+		cout<<"Obtuviste una E-";
+	}	
+	
+	if (Nota > 15 && Nota <= 20)
+	{
+		cout<<"Obtuviste una F+";
+	}
+		
+	if (Nota > 10 && Nota <= 15)
+	{
+		cout<<"Obtuviste una F";
+	}	
+		
+	if (Nota > 5 && Nota <= 10)
+	{
+		cout<<"Obtuviste una F";
+	}
+		
+	if (Nota > 0 && Nota <= 5)
+	{
+		cout<<"Obtuviste una F-";
+	}
+	
+	if (Nota == 0)
+	{
+		cout<<"Obtuviste una F--";
+	}
+
+
+	return 0;
+
+}
