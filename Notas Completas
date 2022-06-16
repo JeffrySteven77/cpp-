@@ -4,15 +4,15 @@ using namespace std;
 
 int main (int argc, char const *argv [])
 {
-		int Nota = 0;
+	int Nota = 0;
 	
 	cout<<"Ingrese la nota que obtuvo: ";
 	cin>>Nota;
 	
 	if (Nota > 100 or Nota < 0)
 	{
-		cout<<"Ingrese una nota entre 0 - 100 ";
-		return 0;                                   
+	cout<<"Ingrese una nota entre 0 - 100 ";
+	return 0;                                   
 	}
 	
 	if (Nota > 95 && Nota <= 100)
