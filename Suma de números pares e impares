@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+int main (int argc, char const *argv [])
+
+{
+	
+	int Numeros_Pares = 0, Numeros_Impares = 0;
+	int Total_Pares = 0, Total_Impares = 0, Suma = 0;
+	
+	cout<<"Suma de Numeros de 1 hasta 10"<<endl;
+	
+	for (Numeros_Pares = 0; Numeros_Pares <= 10; Numeros_Pares ++ )
+	{
+		if (Numeros_Pares % 2 == 0)
+		{
+			Total_Pares = Numeros_Pares + Total_Pares;
+		}
+		
+	}
+	
+	
+	for (Numeros_Impares = 1; Numeros_Impares <= 10; Numeros_Impares ++ )
+	{
+		if (Numeros_Impares % 2 == 1 )
+		{
+			Total_Impares = Numeros_Impares + Total_Impares;
+		}
+		
+		
+	}
+	
+	cout<<"La suma de numeros pares : "<<Total_Pares;
+	
+	cout<<endl;
+	cout<<"La suma de numeros impares : "<<Total_Impares;
+	
+	Suma = Total_Pares + Total_Impares;
+	cout<<endl;
+	cout<<"Total de la suma de los numeros pares e impares : "<<Suma ;
+
+
+	return 0;
+
+}
