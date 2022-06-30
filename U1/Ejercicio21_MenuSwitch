@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+int main (int argc, char const *argv [])
+
+{
+	int Opcion = 0;
+	
+	while (true)
+	{
+		cout<<" MENU "<<endl;
+		cout<<" **** "<<endl;
+		
+		cout<<endl;
+		cout<<"1. Cafe y Granitas "<<endl;
+		cout<<"1. Reposteria "<<endl;
+		cout<<"3. Salir "<<endl;
+		
+		cout<<endl;
+		cout<<"Ingrese una opcion: ";
+		cin>>Opcion;
+		
+		switch (Opcion)
+		{
+		   case 1 :
+		    {
+			   cout<<"Estas en el menu de cafe y granitas "<<endl;
+			   system("pause");
+		    }
+		
+		   case 2 :
+	        {
+		    	cout<<"Estas en el menu de reposteria "<<endl;
+	    		system ("pause");
+	    	}
+		
+    	   case 3 :
+	    	{
+		    	break;
+	    	}
+	    	
+	    	default:
+	    	{
+	    		cout<<"Ingrese una opcion valida (1, 2, 3)"<<endl;
+	    		system ("pause");
+			}
+	    
+		}
+				
+	}
+	
+ 
+
+	return 0;
