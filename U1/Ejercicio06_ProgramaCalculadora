@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+int main (int argc, char const *argv [])
+
+{
+	int Primer_Numero = 0, Segundo_Nuemero = 0;
+	int Suma = 0, Resta = 0, Multiplicacion = 0, Divicion = 0;
+	
+	cout<<"CALCULADORA"<<endl;
+	cout<<"***********"<<endl;
+	
+	cout<<"Ingrese el primer numero : ";
+	cin>>Primer_Numero;
+	
+	cout<<"Ingrese el segundo numero : ";
+	cin>>Segundo_Nuemero;
+	
+	Suma =  Primer_Numero + Segundo_Nuemero;
+	Resta = Primer_Numero - Segundo_Nuemero;
+	Multiplicacion = Primer_Numero * Segundo_Nuemero;
+	Divicion = Primer_Numero / Segundo_Nuemero;
+	
+	cout<<"Su resultado de la suma es: ";
+	cout<< Suma;
+	cout<<endl;
+	
+	cout<<"Su resultado de la resta es: ";
+	cout<< Resta;
+	cout<<endl;
+	
+	cout<<"Su resultado de la Multiplicacion es: ";
+	cout<< Multiplicacion;
+	cout<<endl;
+	
+	cout<<"Su resultado de la divicion es: ";
+	cout<< Divicion;	
+	cout<<endl;
+	
+	return 0;
+
+}
