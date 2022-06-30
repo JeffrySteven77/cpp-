@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main (int argc, char const *argv [])
+
+{
+	int Numero_Entero = 44;
+	
+	cout<<"Numero "<< Numero_Entero;
+	cout<<endl;
+	
+	Numero_Entero = 36;
+	
+	cout<<"El numero modificado es "<<Numero_Entero;
+	
+	
+
+
+	return 0;
+
+}
