@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+int  main ()
+{
+	
+   double Subtotal = 0;
+   double Impuesto = 0.15;
+   double Total = 0;
+   int Descuento = 0;
+   double CalculoImpuesto = 0;
+   double CalculoDescuento = 0;
+   char estaExenta = ' ';
+   
+	cout << " FACTURA " <<endl;
+	cout << " ***** " << endl;
+   
+   // Entrada
+   
+	cout<<"Ingrese el subtotal de la factura: ";
+	cin>> Subtotal;
+	
+	cout<<"Ingrese el descuento (0, 10, 15, 20): ";
+	cin>> Descuento;
+	
+	cout<<"¿Factura Exenta?: S / N: ";
+	cin>>estaExenta;
+	
+	// Procesamiento 
+	
+	if (estaExenta == 's' || estaExenta == 'S' )
+	{
+   	   CalculoDescuento = (Subtotal * Descuento)/100;
+	   CalculoImpuesto = 0 ;
+	   Total =  Subtotal - CalculoDescuento + CalculoImpuesto; 
+	   
+	}
+	
+	if (estaExenta == 'n' || estaExenta == 'N' )
+    
+	{ 
+	   CalculoDescuento = (Subtotal * Descuento)/100;
+	   CalculoImpuesto = (Subtotal- CalculoDescuento) * Impuesto;
+	   Total =  Subtotal - CalculoDescuento + CalculoImpuesto; 
+	}
+	
+	//Salida
+	
+	cout<<endl;
+	cout<<"El  total de su factura es de: ";
+	cout<<Total;
+	
+     return 0;
+}
