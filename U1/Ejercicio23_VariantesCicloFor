@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+
+int main (int argc, char const *argv [])
+
+{
+	for (int I = 0; I <= 20; I++)
+	{
+		cout<< I <<" ";
+	}
+	
+	cout<<endl;
+	cout<<endl;
+	
+	for (int I = 20; I >= 0; I--)
+	{
+		cout<< I <<" ";
+	}
+	
+	cout<<endl;
+	cout<<endl;
+	
+	for (int I = 0; I <= 330; I++)
+	{
+		cout<< I <<" ";
+		
+		if ( I == 111)
+		{
+			break;
+		}
+	}
+	
+	cout<<endl;
+	cout<<endl;
+	
+	for (int I = 0; I <= 10; I++)
+	{	
+		if ( I == 2 || I == 8 )
+		{
+			continue;
+		}
+		cout<< I <<" ";
+	}
+	
+
+	return 0;
+
+}
