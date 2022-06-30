@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main (int argc, char const *argv [])
+{
+	int Contador = 0;
+	
+	for (Contador = 1; Contador <= 17; Contador++)
+	{
+		cout<<"Valor de la variable indice es: ";
+		cout<<Contador<<endl;
+	}
+	
+
+	return 0;
+
+}
