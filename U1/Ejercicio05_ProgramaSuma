@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main (int argc, char const *argv [])
+
+{
+	int Primer_Numero = 0, Segundo_Nuemero = 0, Respuesta = 0;
+	
+	cout<<"Ingrese el primer numero de la suma: ";
+	cin>>Primer_Numero;
+	
+	cout<<"Ingrese el segundo numero de la suma: ";
+	cin>>Segundo_Nuemero;
+	
+	Respuesta =  Primer_Numero + Segundo_Nuemero;
+	
+	cout<<"Su resultado es:";
+	cout<< Respuesta;
+	
+	
+	return 0;
+
+}
