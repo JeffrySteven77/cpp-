@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main (int argc, char const *argv [])
+
+{
+	string Nombre; //con la variables de tipo string se ingresan caracteres dentro de el
+	
+	cout<<"Ingrese su nombre: ";
+	cin>> Nombre;
+	
+	cout<<"Hola, mi nombre es "<<Nombre;
+	
+ 
+
+	return 0;
+
+}
