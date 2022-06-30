@@ -1,0 +1,51 @@
+#include <iostream>
+
+using namespace std;
+
+int main (int argc, char const *argv [])
+{
+	int Nota = 0;
+	
+	cout<<"Ingrese la nota que obtuvo: ";
+	cin>>Nota;
+	
+	if (Nota > 100 or Nota < 0)
+	{
+		cout<<"Ingrese una nota entre 0 - 100 ";
+		return 0;                                   
+	}
+	
+	if (Nota >= 95 && Nota <= 100)
+	{
+		cout<<"Obtuviste una A";
+	}
+		
+	if (Nota >= 85 && Nota <= 94)
+	{
+		cout<<"Obtuviste una B";
+	}
+		
+	if (Nota >= 75 && Nota <= 84)
+	{
+		cout<<"Obtuviste una C";
+	}
+		
+	if (Nota >= 65 && Nota <= 74)
+	{
+		cout<<"Obtuviste una D";
+	}
+		
+	if (Nota >= 60 && Nota <= 64)
+	{
+		cout<<"Obtuviste una E";
+	}
+		
+	if (Nota < 60)
+	{
+		cout<<"Obtuviste una F";
+	}
+
+
+	return 0; // Rompe todas las lineas que se iban a ejecutar dentro del "main"
+
+}
