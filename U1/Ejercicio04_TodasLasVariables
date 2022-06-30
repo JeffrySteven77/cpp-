@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main (int argc, char const *argv [])
+
+{
+	bool Valor_Boolean;
+	Valor_Boolean = true ;
+	
+	int Valor_Entero = 254;
+	double Valor_Double = 99.99;
+	string Valor_String = "Les doy la bienvenida, mi nombre es Jeffry";
+	char Valor_Char = 'J';
+	
+	cout<<"Variable tipo Boolean: "<<Valor_Boolean<<endl;
+	cout<<"Variable tipo Entero : "<<Valor_Entero<<endl;
+	cout<<"Variable tipo Double: "<<Valor_Double<<endl;
+	cout<<"Variable tipo String: "<<Valor_String<<endl;
+	cout<<"Variable tipo Char: "<<Valor_Char<<endl;
+	
+	
+
+	return 0;
+
+}
