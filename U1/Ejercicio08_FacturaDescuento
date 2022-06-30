@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main (int argc, char const *argv [])
+
+{
+	
+	double Subtotal = 0;
+	double Total = 0;
+	double Impuesto = 0.15;
+	int Descuento = 0;
+	double Calculo_Descuento = 0;
+	double Calculo_Impuesto = 0;
+	
+	
+	cout << " FACTURA " <<endl;
+	cout << " ***** " << endl;
+	
+	cout << "Ingrese el subtotal de la factura: ";
+	cin >> Subtotal;
+	cout << "Ingrese el descuento (0, 10, 15, 20): ";
+	cin >> Descuento;
+	
+	
+	Calculo_Descuento  = (Subtotal * Descuento)/100 ;
+	Calculo_Impuesto = (Subtotal - Calculo_Descuento ) * Impuesto;
+	Total = Subtotal - Calculo_Descuento + Calculo_Impuesto;
+	 
+	
+	cout<< endl;
+	cout<<" El total a pagar es: "<< Total; 
+
+
+	return 0;
+
+}
