@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+int A = 5;
+int B =6;
+
+while (A < B)
+{
+	cout << "Ingrese un valor para A: ";
+	cin>> A;
+}
+
+cout<<endl;
+cout<<"El ciclo termino";
+
+return 0;
+}
