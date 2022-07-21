@@ -14,15 +14,15 @@ int main (int argc, char const *argv[])
 	
 	while (true)
 	{
-		srand (time(NULL));
+	    srand (time(NULL));
 	
 	    cout<<endl;
 	
-        cout << "Escriba 1 para arrojar los dados: ";
-        cin >> D1; 
+           cout << "Escriba 1 para arrojar los dados: ";
+           cin >> D1; 
         
-        if (D1 == 1)
-        {
+           if (D1 == 1)
+              {
         	Dados = rand () % 6 + 1;
 	        cout << "El numero del primer dado es:" << Dados;
 	        cout << endl;
@@ -34,10 +34,10 @@ int main (int argc, char const *argv[])
 	   	
 		}
 		
-		else 
+	    else 
 		{
-			cout << "Dato no valido"<<endl;
-			cout << "Digite el numero que se le pide"<<endl;
+	         cout << "Dato no valido"<<endl;
+	         cout << "Digite el numero que se le pide"<<endl;
 		
 		}
 	    system ("pause");
