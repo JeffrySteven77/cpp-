@@ -1,0 +1,33 @@
+#include <iostream>
+#include <stdlib.h> 
+#include <time.h>
+
+using namespace std;
+
+int main (int argc, char const *argv[])
+{
+	int D1 = 0;
+	int Dados = 0;
+	
+	cout << "JUEGO DE DADOS"<<endl;
+	cout << "--------------"<<endl;
+	
+	srand (time(NULL));
+	
+	cout<<endl;
+
+    cout << "Escriba 1 para arrojar los dados: ";
+    cin >> D1; 
+	
+	system ("cls");
+	
+	Dados = rand () % 6 + 1;
+	cout << "El numero del primer dado es:" << Dados;
+	cout << endl;
+	
+	
+	Dados = rand () % 6 + 1;
+	cout << "El numero del segundo dado es:" << Dados;
+	
+	return 0;
+}
