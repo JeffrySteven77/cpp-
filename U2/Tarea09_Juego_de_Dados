@@ -12,22 +12,39 @@ int main (int argc, char const *argv[])
 	cout << "JUEGO DE DADOS"<<endl;
 	cout << "--------------"<<endl;
 	
-	srand (time(NULL));
+	while (true)
+	{
+		srand (time(NULL));
 	
-	cout<<endl;
+	    cout<<endl;
+	
+        cout << "Escriba 1 para arrojar los dados: ";
+        cin >> D1; 
+        
+        if (D1 == 1)
+        {
+        	Dados = rand () % 6 + 1;
+	        cout << "El numero del primer dado es:" << Dados;
+	        cout << endl;
+	
+	
+	        Dados = rand () % 6 + 1;
+	        cout << "El numero del segundo dado es:" << Dados;
+	        cout << endl;
+	   	
+		}
+		
+		else 
+		{
+			cout << "Dato no valido"<<endl;
+			cout << "Digite el numero que se le pide"<<endl;
+		
+		}
+	    system ("pause");
+	    system ("cls");
 
-    cout << "Escriba 1 para arrojar los dados: ";
-    cin >> D1; 
-	
-	system ("cls");
-	
-	Dados = rand () % 6 + 1;
-	cout << "El numero del primer dado es:" << Dados;
-	cout << endl;
-	
-	
-	Dados = rand () % 6 + 1;
-	cout << "El numero del segundo dado es:" << Dados;
+	}
+
 	
 	return 0;
 }
