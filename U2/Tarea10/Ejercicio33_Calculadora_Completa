@@ -1,0 +1,94 @@
+#include <iostream>
+
+using namespace std;
+
+int Sumar (int N1, int N2)
+{
+	return N1 + N2;
+}
+
+int Restar (int N1, int N2)
+{
+	return N1 - N2;
+}
+
+int Multiplicar (int N1, int N2)
+{
+	return N1 * N2;
+}
+
+int Dividir (int N1, int N2)
+{
+	return N1 / N2;
+}
+
+int Calculadora (int N1, int N2, char Operador)
+{
+    switch (Operador)
+   {
+   	 case '+':
+	 
+		return Sumar (N1, N2);
+	 break;
+	
+	 case '-':
+	 
+		return Restar (N1, N2);
+	 break;
+	
+	 case '*':
+	 
+		return Multiplicar (N1, N2);
+	 break;
+	
+	case '/':
+	
+		if (N2 == 0)
+		{
+			throw "¡ERROR. NO ES POSIBLE DIVIDIR ENTRE 0!";
+		}
+		return Dividir (N1, N2);
+	break;
+	
+	default:
+	break;
+		
+   }    
+   
+throw "Este operador no es valido";
+
+}
+
+int main (int argc, char const* argv[])
+{
+	int Numero1 = 0;
+	int Numero2 = 0;
+	int Resultado = 0;
+	char Operador = ' ';
+	
+	cout <<"Ingrese un numero: ";
+	cin >> Numero1; 
+	
+	cout <<"Ingrese el operador: ";
+	cin >> Operador; 
+	
+	cout <<"Ingrese otro numero: ";
+	cin >> Numero2;
+	 
+	cout <<endl;
+	
+	try 
+	{
+	   Resultado = Calculadora (Numero1, Numero2, Operador); 
+	   cout <<"El resultado es: ";
+	   cout << Resultado;
+		
+	}
+	
+	catch (const char* error)
+	{
+		cout << error;
+	}
+	 
+  return 0;
+}
