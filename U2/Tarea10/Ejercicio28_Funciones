@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int suma ()
+{
+	return 5 + 7;
+}
+
+string Nombre_Completo ()
+{
+	return "Jeffry Menjivar";
+}
+
+int main ( int argc, char const * argv[]) 
+
+{
+	int Resultado = suma ();
+	
+	string Nombre_Apellido = Nombre_Completo ();
+	
+	cout << Resultado;
+	cout <<endl;
+	cout << Nombre_Apellido;
+	
+	
+	return 0;
+}
