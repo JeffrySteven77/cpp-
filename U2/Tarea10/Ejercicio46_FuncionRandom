@@ -1,0 +1,25 @@
+#include <iostream>
+#include <stdlib.h> 
+#include <time.h>
+
+using namespace std;
+
+int main (int argc, char const *argv[])
+{
+	int Numero = 0;
+
+	srand (time(NULL));
+	
+
+	for (int Conteo = 0; Conteo <= 10; Conteo++);
+	{
+		Numero = rand ()% 10 + 1;
+	
+	    cout << "Numero random " << Numero; 
+	    cout << endl;
+	}
+	
+
+	
+	return 0 ;
+}
