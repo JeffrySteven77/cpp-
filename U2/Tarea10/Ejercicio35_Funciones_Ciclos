@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+void Imprimir_Caracteres (char Caracter, int Ciclos)
+{
+	for (int Contador = 0; Contador < Ciclos; Contador++)
+	{
+		cout << Caracter;
+	}
+	
+	cout << endl;
+}
+
+int main (int argc, char const* argv[])
+{
+	Imprimir_Caracteres ('H', 12);
+	Imprimir_Caracteres ('>', 70);
+
+	cout << "Hola mundo :) " <<endl;
+	
+	Imprimir_Caracteres ('<', 200);
+	
+	return 0;
+}
