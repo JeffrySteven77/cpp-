@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+string Nombre_Completo (string Nombre, string Apellido)
+{
+	return Nombre + " "+Apellido;
+}
+
+int main (int argc, char const* argv[])
+{
+	string Primer_Nombre = " ";
+	string Primer_Apellido = " ";
+	
+	cout << "Escriba su primer nombre: ";
+	cin >> Primer_Nombre;
+	
+	cout << "Escriba su primer apellido: ";
+	cin >> Primer_Apellido;
+	
+	cout << endl;
+	
+	cout << "Nombre completo: ";
+	cout << Nombre_Completo (Primer_Nombre, Primer_Apellido);
+	
+	
+	
+	
+	return 0 ;
+}
