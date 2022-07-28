@@ -1,0 +1,51 @@
+#include <iostream>
+
+using namespace std;
+
+int Sumar (int N1, int N2)
+{
+	return N1 + N2;
+}
+
+int Restar (int N1, int N2)
+{
+	return N1 - N2;
+}
+
+int Calculadora (int N1, int N2, char Operador)
+{
+	if (Operador == '+')
+	{
+		return Sumar (N1, N2);
+	}
+	
+	if (Operador == '-')
+	{
+		return Restar (N1, N2);
+	}
+
+	return -0;
+}
+
+int main (int argc, char const* argv[])
+{
+	int Numero1 = 0;
+	int Numero2 = 0;
+	char Operador = ' ';
+	
+	cout <<"Ingrese un numero: ";
+	cin >> Numero1; 
+	
+	cout <<"Ingrese el operador: ";
+	cin >> Operador; 
+	
+	cout <<"Ingrese otro numero: ";
+	cin >> Numero2;
+	 
+	cout <<endl;
+	 
+	cout <<"El resultado es: ";
+	cout << Calculadora (Numero1, Numero2, Operador); 
+	
+ return 0;	
+}
