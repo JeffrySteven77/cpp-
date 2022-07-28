@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int sumar (int A, int B)
+{
+	return A + B;
+}
+
+int restar (int A, int B)
+{
+	return A - B;
+}
+
+
+int main (int argc, char const* argv[])
+{
+	system ("cls");
+	int Numero_1 = 0;
+	int Numero_2 = 0;
+	
+	cout << "Ingrese el valor del primer numero: ";
+	cin >> Numero_1;
+	cout << "Ingrese el valor del segundo numero: ";
+	cin >> Numero_2;
+	
+	cout <<endl;
+	
+	cout << "El resultado de la suma  es: ";
+	cout <<	sumar (Numero_1, Numero_2);
+	
+	cout << endl;
+	
+	cout << "El resultado de la resta es: ";
+	cout <<	restar (Numero_1, Numero_2);
+	
+	return 0;
+}
