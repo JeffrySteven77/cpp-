@@ -4,37 +4,36 @@
 
 using namespace std;
 
-int Numero_Random ()
-{
-	 return rand() % 5 + 1;
-}
-
 int main ( int argc, char const * argv[])
 {
+	int A [5][5];
 	
-	int Numero_Random ();
 	srand (time (NULL));
+	
+	int Numero_Ramdom = 0;
     int Total_Suma = 0;
-    int A [5][5];
 	
 	for (int I = 0; I < 5; I++)
 	{
 		for (int J = 0; J < 5; J++)
 		{
-			A[I][J] = Numero_Random();
+			Numero_Ramdom = rand() % 5 + 1;
+			A[I][J] = Numero_Ramdom;
 			Total_Suma = Total_Suma + (A[I][J]);
 		}
 	}
 	
 	for (int I = 0; I < 5; I++)
-	{
+	{		
 		for (int J = 0; J < 5; J++)
 		{
-	    	cout <<" "<< A[I][J];	
+	    	cout <<" " << A[I][J];
+			
 		}
-		cout << endl;
+		cout<<endl;
 	}
    cout<<endl;
-   cout << "TOTAL SUMA: "<< Total_Suma;
+   cout << "TOTAL: ";
+   cout << Total_Suma;
 	return 0;
 }
