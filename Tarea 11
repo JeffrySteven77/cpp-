@@ -12,8 +12,8 @@ int Numero_Random ()
 int main ( int argc, char const * argv[])
 {
 	
-	int Numero_Random ();
-	srand (time (NULL));
+    int Numero_Random ();
+    srand (time (NULL));
     int Total_Suma = 0;
     int A [5][5];
 	
