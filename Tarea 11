@@ -1,0 +1,40 @@
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+
+using namespace std;
+
+int Numero_Random ()
+{
+	 return rand() % 5 + 1;
+}
+
+int main ( int argc, char const * argv[])
+{
+	
+	int Numero_Random ();
+	srand (time (NULL));
+    int Total_Suma = 0;
+    int A [5][5];
+	
+	for (int I = 0; I < 5; I++)
+	{
+		for (int J = 0; J < 5; J++)
+		{
+			A[I][J] = Numero_Random();
+			Total_Suma = Total_Suma + (A[I][J]);
+		}
+	}
+	
+	for (int I = 0; I < 5; I++)
+	{
+		for (int J = 0; J < 5; J++)
+		{
+	    	cout <<" "<< A[I][J];	
+		}
+		cout << endl;
+	}
+   cout<<endl;
+   cout << "TOTAL SUMA: "<< Total_Suma;
+	return 0;
+}
