@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+void menu()
+{
+	int Opcion = 0;
+	
+	while (true)
+	{
+		system ("slc");
+		
+		cout << "BIBLIOTECA UNAH"<<endl;
+		cout << "..............."<<endl;
+	}
+}
+
+int main(int argc, char** argv)
+{
+
+	return 0;
+}
