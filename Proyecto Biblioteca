@@ -1,0 +1,176 @@
+#include <iostream>
+
+
+using namespace std;
+
+
+int main() {
+	
+	int Opcion, Volver, i = 0, Cantidad[100], Numero = 0, Codigo [100], Code = 1, Alquilar, j;
+	string Titulo_Libro [100], Agregar;
+	
+
+	
+	do
+	{
+	system ("cls");
+	cout << "BIBLIOTECA UNAH"<<endl;
+	cout << "..............."<<endl;
+	cout << endl;
+	
+		cout << "INICIO"<<endl;
+		
+	    cout << endl;
+	    
+		cout << "(1) Agregar Libros"<<endl;
+	    cout << "(2) Librerias"<<endl;
+	    cout << "(3) Alquilar libros"<<endl;
+		cout << "(4) Salir"<<endl;
+		
+	    cout << "Ingrese una Opcion : " <<endl;
+	    cin >> Opcion;
+	    
+	    switch (Opcion)
+	    {
+	    	case 1:
+	    		{
+	    			system ("cls");
+	    			cout << "AGREGAR LIBROS" << endl;
+					cout << ".............." << endl;
+					cout <<endl;
+					
+	    			cout <<"Ingrese el titulo del libro  "<<endl;
+	    			cin >> Agregar;
+	    			
+	    			for (j=0; j < Numero;j++)
+	    			{
+	    				if (Agregar == Titulo_Libro[j])
+						{
+	    					cout <<"El codigo del libro es :"<<endl;
+	    					cout << Codigo [j] <<endl;
+	    					cout << "Ingrese cuantos libros se agregaran :" <<endl;
+	    					int Anadir = 0;
+	    					cin >> Anadir;
+	    					Cantidad [j] = Cantidad [j] + Anadir;
+	    					
+	    				
+						}
+					}
+					
+					if (j == Numero)
+					{
+						Titulo_Libro [i] = Agregar;
+						cout << "Ingrese la cantidad del producto ";
+						cin >> Cantidad [i];
+						
+						cout << "El codigo asignado a este libro es: ";
+						cout << Code <<endl;
+						Codigo [i] = Code ;
+						system ("pause");
+						Code ++;
+						system ("cls");
+						cout <<endl;
+						cout << "1) Volver a la biblioteca"<<endl;
+						cout << "2) Salir"<<endl;
+						cin >> Volver;
+						
+						Numero = Numero + 1;
+						i = i + 1;
+						
+					}
+					
+						break;
+		
+				}
+				
+				case 2:
+					{
+						system ("cls");
+						cout << "LIBRERIA" << endl;
+						cout << "........" << endl;
+						
+						cout << endl;
+						
+						for(i = 0; i < Numero; i++)
+						{	
+							cout <<"Cant."<< Cantidad [i] <<" "<<Titulo_Libro[i]<< " ---> CODIGO: " <<Codigo[i];
+							cout <<endl;
+							
+						}
+						cout <<endl;
+						cout << "1) Volver a la biblioteca"<<endl;
+						cout << "2) Salir"<<endl;
+						cin >> Volver;
+						
+						break;
+					}
+					
+					case 3:
+						{
+							system("cls");
+							cout << "ALQUILER DE LIBROS" << endl;
+						    cout << ".................." << endl;
+						    
+						    cout << endl;
+						
+							cout << "Ingrese el codigo del libro para alquilar"<<endl;
+							cin >> Code;
+							cout <<"El Titulo del libro a alqilar es ";
+							cout << Titulo_Libro[Code - 1]<<endl;
+							cout << "Cantidad que alquilara: " <<endl;
+							cin >>Alquilar;
+							
+							if ( Alquilar <= Cantidad [Code -1] )
+							{
+								Cantidad[Code -1] = Cantidad [Code - 1]- Alquilar;
+								cout << "La cantidad de libros " << Titulo_Libro [Code-1] << "es :";
+								cout << Cantidad [Code -1] << endl;
+								system ("pause");
+								
+								system ("cls");
+								
+								cout << "Libro alquilado"<<endl;;
+								
+								system ("pause");
+								cout << "1) Volver a la biblioteca"<<endl;
+						        cout << "2) Salir"<<endl;
+						        cin >> Volver;
+								
+							}
+							
+							 else
+							{
+								system ("cls");
+								cout << "¡La cantidad de libros de " << Titulo_Libro[i] << " no se encuentra disponibles para alquilar " ;
+								cout << "Revisar la libreria " <<endl;
+						    	system ("pause");
+							}
+							
+							break;
+						}
+						
+						case 4:
+							{
+								system("cls");
+								cout <<"Biblioteca cerrada"<<endl;
+								system ("pause+");
+								return 0;
+									
+							}
+						default:
+									
+							{
+								system("cls");
+								cout << "OPCION NO VALIDA"<<endl;
+								cout << "1) Volver a la biblioteca"<<endl;
+						        cout << "2) Salir"<<endl;
+						        cin >> Volver;
+								
+						         break;	
+							}
+						
+		}
+	} while (Volver == 1);
+
+
+}
