@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+// Definición de la clase Persona
+class Persona {
+private:
+    string nombre;
+    int edad;
+
+public:
+    // Constructor
+    Persona(string n, int e) {
+        nombre = n;
+        edad = e;
+    }
+
+    // Método para mostrar los datos de la persona
+    void mostrarDatos() {
+        cout << "Nombre: " << nombre << endl;
+        cout << "Edad: " << edad << endl;
+    }
+};
+
+int main() {
+    // Crear objetos de la clase Persona
+    Persona persona1("Juan", 25);
+    Persona persona2("Maria", 30);
+
+    // Mostrar los datos de las personas
+    cout << "Datos de la persona 1:" << endl;
+    persona1.mostrarDatos();
+
+    cout << "\nDatos de la persona 2:" << endl;
+    persona2.mostrarDatos();
+
+    return 0;
+}
