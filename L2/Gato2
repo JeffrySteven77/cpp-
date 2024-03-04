@@ -1,0 +1,43 @@
+/* 
+     U2 PROGRAMACION ORIENTADA A OBJETOS
+     Proposito: Crear un gato y agregar caracteristicas
+
+     Autor: Jeffry Stiven Menjivar Lopez
+     Fecha: 26 de febrero 2024
+     Hora: 11:26
+*/ 
+
+#include <iostream>
+
+using namespace std;
+// en "CLASS" creamos el objeto "gato"
+class gato {
+     public:
+     string Nombre;
+     string Pelo = "Amarillo";
+     
+     /*seguido se inicializan los constructores
+     es como agregar cualidades al objeto*/
+
+     gato(){                       // Construcor asigna valores por omicion al objeto
+          Nombre = "Mincho";
+          Pelo = "Negro";
+
+     }
+     gato (string OtroNombre, string OtroPelo){  //constructor para asignar otros valores
+          Nombre = OtroNombre;
+          Pelo = OtroPelo;
+
+     }
+    
+};
+
+int main()
+{
+    gato PrimerGato;
+    gato SegundoGato("","");
+    gato TercerGato("Ocho","");
+
+
+     return 0;
+}
