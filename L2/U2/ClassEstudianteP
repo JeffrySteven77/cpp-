@@ -1,4 +1,5 @@
-#include <iostream>
+
+  #include <iostream>
 #include <string>
 using namespace std;
 
@@ -20,11 +21,6 @@ class Estudiante {
       nota1 = n1;
       nota2 = n2;
     }
-
-    // Método para calcular el promedio
-    double promedio() {
-      return (nota1 + nota2) / 2;
-    }
      Estudiante(string n, string m, double n1, double n2, double n3) {
       nombre = n;
       matricula = m;
@@ -34,31 +30,43 @@ class Estudiante {
     }
 
     // Método para calcular el promedio
-    double promedio3() {
+    double promedio() {
+      return (nota1 + nota2) / 2;
+
+    // Método para calcular el promedio
+    double promedio3(); {
       return (nota1 + nota2 + nota3) / 3;
     }
 
 
     // Método para mostrar los datos del estudiante
-    void mostrar() {
+    void mostrar(); {
       cout << "Nombre: " << nombre << endl;
       cout << "Matricula: " << matricula << endl;
       cout << "Nota 1: " << nota1 << endl;
       cout << "Nota 2: " << nota2 << endl;
-      cout << "Promedio: " << promedio() << endl;
-    }
-    void mostrar3() {
-      cout << "Nombre: " << nombre << endl;
-      cout << "Matricula: " << matricula << endl;
-      cout << "Nota 1: " << nota1 << endl;
-      cout << "Nota 2: " << nota2 << endl;
-      cout << "Nota 3: " << nota3 << endl;
-      cout << "Promedio: " << promedio3() << endl;
-    }
-};
+      if (nota3 != 0)
+      {
+        cout << "Nota 3: "<<nota3<<endl;
+        cout << "Promedio Notas: "<<promedio3()<<endl;
+      }
+      else
+      {
+        cout << "Promedio Notas: "<<promedio()<<endl;
 
+      }
+      
+      cout << "Promedio: " << promedio() << endl;
+      
+    }
+
+    }
+    
+
+};
 // Programa principal
-int main() {
+int main()
+ {
   string nombreEstudiante, matriculaEstudiante;
   double nota1 = 0, nota2 = 0, nota3 =0;
 
@@ -77,12 +85,12 @@ int main() {
   // Creación de un objeto de la clase Estudiante
   Estudiante e1(nombreEstudiante, matriculaEstudiante, nota1, nota2);
   Estudiante e2("Harold", "2022021", 7.8, 10.0);
-  Estudiante e3("Yennifet",matriculaEstudiante, nota1,nota2,nota3);
+  Estudiante e3("Yennifet","20212021033", 5.7,5.6,9.0);
 
   // Llamada al método mostrar del objeto
   e1.mostrar();
   e2.mostrar();
-  c3.mostrar3();
+  e3.mostrar();
   
   
 
