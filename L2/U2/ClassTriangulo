@@ -1,0 +1,146 @@
+/*
+Proposito: Utilizar clases para el calculo de areas de un triangulo
+
+Autor: JEFFRY MENJIVAR
+Fecha: 5 / marzo / 2024
+Hora: 19:00
+*/
+
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+class triangulo {
+private:
+double ladoA = 0, ladoB = 0, ladoC = 0;
+double Altura = 0, Base = 0,Area = 0;
+
+public:
+triangulo(double lado_A, double lado_B, double lado_C) {
+ladoA = lado_A;
+ladoB = lado_B;
+ladoC = lado_C;
+
+}
+
+triangulo(double h, double b) {
+Altura = h;
+Base = b;
+}
+
+void areaConLados() {
+double semiPerimetro = 0, area = 0;
+if (( ladoA + ladoB > ladoC ) and ( ladoB + ladoC > ladoA ) and ( ladoC + ladoA > ladoB ) ) {
+semiPerimetro = (ladoA + ladoB + ladoC) / 2;
+area = sqrt(semiPerimetro*(semiPerimetro-ladoA)*(semiPerimetro-ladoB)*(semiPerimetro-ladoC));
+cout << " El Ã¡rea del triangulo es " << area << endl;
+}
+else
+cout << "\n Los valores ingresados no forman un triangulo " << endl;{
+}
+
+void areaConBaseAltura() ;{
+Area = (Base*Altura)/2;
+}
+};
+
+// DeclaraciÃ³n de funciones
+// FunciÃ³n que muestra el menu y solicita la variable de opciÃ³n: No recibe parametros ni devuelve ningÃºn dato
+void menu();
+
+// FunciÃ³n que valida datos numÃ©ricos que se encuentran en un dato numÃ©rico: Recibe 2 parametros y devuelve un valor decimal
+double validarDatos( double, double);
+
+void pedirLados();
+
+int opcion = 0; // Variable global
+double ladoA = 0, ladoB = 0, ladoC = 0;
+
+void datosT();
+int opcion = 0;
+
+double Base = 0, Altura= 0;
+};
+int main()
+{
+cout.precision(12);
+system("cls");
+
+do
+{
+menu();
+system("cls");
+cout << " La opciÃ³n seleccionada es = "<< endl;;
+cin >> opcion;
+
+switch (opcion)
+{
+case 1:
+pedirLados();
+break;
+case 2:
+cout << "\n areaConBaseAltura() " << endl;
+datosT();
+break;
+case 3:
+cout << " Muchas gracias por su participaciÃ³n, hasta luego, pongase bien la mascarilla " << endl;
+}
+} while (opcion != 3);
+
+return 0;
+}
+
+void menu()
+{
+cout << "\n AREA DE FIGURAS GEOMÃ‰TRICAS " << endl;
+cout << " Menu de opciones: " << endl;
+cout << " Seleccione una opciÃ³n para su ejecuciÃ³n: " << endl;
+cout << " 1. Area de un triÃ¡ngulo conociendo sus tres lados " << endl;
+cout << " 2. Area de un triÃ¡ngulo conociendo su base y altura " << endl;
+cout << " 3. Salir del programa " << endl;
+cout << " OpciÃ³n = " ;
+
+opcion = validarDatos(1,3);
+}
+
+double validarDatos(double limiteInferior, double limiteSuperior)
+{
+float entrada = 0;
+do
+{
+cin >> entrada;
+if(entrada < limiteInferior or entrada > limiteSuperior )
+{
+cout << "\n La opciÃ³n ingresada no debe ser menor que " << limiteInferior << " ni mayor que " << limiteSuperior << endl;
+cout << "\n Intente de nuevo " << endl;
+}
+} while ( entrada < limiteInferior or entrada > limiteSuperior);
+return entrada;
+}
+
+void pedirLados()
+{
+triangulo figura_1(ladoA, ladoB, ladoC);
+
+cout << "\n Ingrese la medida del lado A ";
+cin >> ladoA;
+cout << " Ingrese la medida del lado B ";
+cin >> ladoB;
+cout << " Ingrese la medida del lado C ";
+cin >> ladoC;
+
+figura_1.areaConLados();
+
+}
+void datosT()
+{
+triangulo figura2(Base,Altura);
+cout << cin>>Base;
+cout << cin>>Altura;
+
+figura2.areaConBaseAltura();
+}
+
+//completa la segunda opcion
