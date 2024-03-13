@@ -1,5 +1,17 @@
+/*
+Lenguaje de Programacion II
+U2 Programacion Orientada a Objetos
 
-  #include <iostream>
+Objetivo del programa: Ingresar notas de estudiante y que se saque un promedio segun la cantidad de notas que pida
+como ser el caso si se ingresan 2 notas saca el promedio entre dos al igual con las 3 notas entre 3
+
+Nombre: Jeffry Stiven Menjivar Lopez
+#cuenta 20212021033
+
+fecha 12 de marzo del 2024
+*/
+
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -29,18 +41,18 @@ class Estudiante {
       nota3 = n3;
     }
 
-    // Método para calcular el promedio
+    // Método para calcular el promedio de 2 notas
     double promedio() {
       return (nota1 + nota2) / 2;
-
-    // Método para calcular el promedio
-    double promedio3(); {
+    }
+    // Método para calcular el promedio de 3 notas
+    double promedio3() {
       return (nota1 + nota2 + nota3) / 3;
     }
 
 
     // Método para mostrar los datos del estudiante
-    void mostrar(); {
+    void mostrar(){
       cout << "Nombre: " << nombre << endl;
       cout << "Matricula: " << matricula << endl;
       cout << "Nota 1: " << nota1 << endl;
@@ -53,14 +65,12 @@ class Estudiante {
       else
       {
         cout << "Promedio Notas: "<<promedio()<<endl;
-
       }
-      
-      cout << "Promedio: " << promedio() << endl;
+     
       
     }
 
-    }
+    
     
 
 };
