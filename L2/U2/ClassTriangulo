@@ -2,7 +2,7 @@
 Proposito: Utilizar clases para el calculo de areas de un triangulo
 
 Autor: JEFFRY MENJIVAR
-Fecha: 5 / marzo / 2024
+Fecha: 18 / marzo / 2024
 Hora: 19:00
 */
 
@@ -15,7 +15,7 @@ using namespace std;
 class triangulo {
 private:
 double ladoA = 0, ladoB = 0, ladoC = 0;
-double Altura = 0, Base = 0,Area = 0;
+double Altura = 0, Base = 0; //Area = 0;
 
 public:
 triangulo(double lado_A, double lado_B, double lado_C) {
@@ -30,7 +30,7 @@ Altura = h;
 Base = b;
 }
 
-void areaConLados() {
+void areaConLados(double LadoA,double LadoB,double LadoC) {
 double semiPerimetro = 0, area = 0;
 if (( ladoA + ladoB > ladoC ) and ( ladoB + ladoC > ladoA ) and ( ladoC + ladoA > ladoB ) ) {
 semiPerimetro = (ladoA + ladoB + ladoC) / 2;
@@ -41,8 +41,11 @@ else
 cout << "\n Los valores ingresados no forman un triangulo " << endl;{
 }
 
-void areaConBaseAltura() ;{
-Area = (Base*Altura)/2;
+void areaConBaseAltura(double Altura, double Base) ;{
+    double Area = 0;
+Area = (1.0/2.0)*Base*Altura;
+cout << "El area del triangulo es = " <<Area<<endl;
+}
 }
 };
 
@@ -55,37 +58,31 @@ double validarDatos( double, double);
 
 void pedirLados();
 
-int opcion = 0; // Variable global
-double ladoA = 0, ladoB = 0, ladoC = 0;
+void pedirAlturaBase();
 
-void datosT();
 int opcion = 0;
+double LadoA = 0, LadoB = 0,LadoC = 0;
+double Base = 0, Altura = 0;
 
-double Base = 0, Altura= 0;
-};
 int main()
 {
-cout.precision(12);
-system("cls");
 
-do
+do 
 {
 menu();
 system("cls");
-cout << " La opciÃ³n seleccionada es = "<< endl;;
-cin >> opcion;
 
 switch (opcion)
 {
 case 1:
-pedirLados();
-break;
+  pedirLados();
+  break;
+
 case 2:
-cout << "\n areaConBaseAltura() " << endl;
-datosT();
-break;
+  pedirAlturaBase();
+   break;
 case 3:
-cout << " Muchas gracias por su participaciÃ³n, hasta luego, pongase bien la mascarilla " << endl;
+cout <<endl<<" Muchas gracias por su participaciÃ³n, hasta luego, pongase bien la mascarilla " << endl;
 }
 } while (opcion != 3);
 
@@ -122,25 +119,27 @@ return entrada;
 
 void pedirLados()
 {
-triangulo figura_1(ladoA, ladoB, ladoC);
 
 cout << "\n Ingrese la medida del lado A ";
 cin >> ladoA;
-cout << " Ingrese la medida del lado B ";
+cout << "\n Ingrese la medida del lado B ";
 cin >> ladoB;
-cout << " Ingrese la medida del lado C ";
+cout << "\n Ingrese la medida del lado C ";
 cin >> ladoC;
 
-figura_1.areaConLados();
+triangulo figura_1(ladoA, ladoB, ladoC);
+figura_1.areaConLados(LadoA,LadoB,LadoC);
 
 }
-void datosT()
+void PedirAlturaBase()
 {
-triangulo figura2(Base,Altura);
-cout << cin>>Base;
-cout << cin>>Altura;
+  
 
-figura2.areaConBaseAltura();
+    cout <<endl<<"Ingrese la medida de la base del triangulo ";
+    cin>>Base;
+    cout<<endl<< "Ingrese la medida de la altura del triangulo";
+    cin>>Altura;
+triangulo figura_2(Base,Altura);
+figura_2.areaConBaseAltura(Altura, Base);
 }
 
-//completa la segunda opcion
