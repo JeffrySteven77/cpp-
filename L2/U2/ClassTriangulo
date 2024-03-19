@@ -15,7 +15,7 @@ using namespace std;
 class triangulo {
 private:
 double ladoA = 0, ladoB = 0, ladoC = 0;
-double Altura = 0, Base = 0; //Area = 0;
+double Altura = 0, Base = 0; 
 
 public:
 triangulo(double lado_A, double lado_B, double lado_C) {
@@ -38,16 +38,16 @@ area = sqrt(semiPerimetro*(semiPerimetro-ladoA)*(semiPerimetro-ladoB)*(semiPerim
 cout << " El Ã¡rea del triangulo es " << area << endl;
 }
 else
-cout << "\n Los valores ingresados no forman un triangulo " << endl;{
+cout << "\n Los valores ingresados no forman un triangulo " << endl;
 }
 
-void areaConBaseAltura(double Altura, double Base) ;{
+void areaConBaseAltura(double Altura, double Base){
     double Area = 0;
 Area = (1.0/2.0)*Base*Altura;
 cout << "El area del triangulo es = " <<Area<<endl;
 }
-}
 };
+
 
 // DeclaraciÃ³n de funciones
 // FunciÃ³n que muestra el menu y solicita la variable de opciÃ³n: No recibe parametros ni devuelve ningÃºn dato
@@ -121,19 +121,18 @@ void pedirLados()
 {
 
 cout << "\n Ingrese la medida del lado A ";
-cin >> ladoA;
+cin >> LadoA;
 cout << "\n Ingrese la medida del lado B ";
-cin >> ladoB;
+cin >> LadoB;
 cout << "\n Ingrese la medida del lado C ";
-cin >> ladoC;
+cin >> LadoC;
 
-triangulo figura_1(ladoA, ladoB, ladoC);
+triangulo figura_1(LadoA, LadoB, LadoC);
 figura_1.areaConLados(LadoA,LadoB,LadoC);
 
 }
 void PedirAlturaBase()
 {
-  
 
     cout <<endl<<"Ingrese la medida de la base del triangulo ";
     cin>>Base;
@@ -142,4 +141,5 @@ void PedirAlturaBase()
 triangulo figura_2(Base,Altura);
 figura_2.areaConBaseAltura(Altura, Base);
 }
+
 
